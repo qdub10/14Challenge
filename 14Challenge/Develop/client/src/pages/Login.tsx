@@ -6,7 +6,7 @@ import { login } from "../api/authAPI";
 const Login = () => {
   const [loginData, setLoginData] = useState({
     username: '',
-    password: ''
+    password: '',
   });
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -23,9 +23,9 @@ const Login = () => {
       const data = await login(loginData);
       Auth.login(data.token);
     } catch (err) {
-      console.error('Failed to login', err);
+      console.error('Failed to login', err); 
     }
-  };
+  }
 
   return (
     <div className='container'>
